@@ -46,3 +46,16 @@ PULL - this command will pull eveything of this project
 1.git add file name
 2.git commit -m "message"
 3. git push origin master.
+
+*******************************************************************************************
+
+Now following is the way to get a clone of any new project from remote to local
+1. type command git clone <repositorey url>
+
+****************************************************************************
+Switching branchs
+
+1. if we want to switch to any other branch then use command
+git branch branchname //creates a new branch
+git checkout branch name // switch to branch
+git branch --show-current // to check current branch
