@@ -43,4 +43,6 @@ FETCH - comand will fetch only the new file added on project
 PULL - this command will pull eveything of this project
 
 3. Now if I modify any files then after modifiyng write a command
-git add file name
+1.git add file name
+2.git commit -m "message"
+3. git push origin master.
