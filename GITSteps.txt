@@ -53,8 +53,7 @@ Now following is the way to get a clone of any new project from remote to local
 1. type command git clone <repositorey url>
 
 ****************************************************************************
-Switching branchs
-
+Switching branchs  
 1. if we want to switch to any other branch then use command
 git branch branchname //creates a new branch
 git checkout branch name // switch to branch
