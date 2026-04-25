@@ -1,6 +1,7 @@
 1. download git and install
 2. then write command git init , you will gt status of all the files
-U - means untracked files, means they are ready to track or to staging
+    -- U - means untracked files, means they are ready to track or to staging
+    -- A - means index added or its already there on global repo git
 3. then write git config --global user.name "pinal0906" - needs 1 time only
 4. then write git config --global user.email "pbpandya96@gmail.com" - needs 1 time only
 5. git add -a = all files will be added to global repositery
@@ -9,3 +10,37 @@ U - means untracked files, means they are ready to track or to staging
    --if files with only java extension then git add *.java
    --if all file wit folder git add foldername
    --if everything then git add .
+6. Then write git commit -m "any message"
+7. Then after all these my all the files on my local reporsitory from my system
+
+so, first we created project, then we tracked those files using git init 
+then we added indexed using git add -a and added files to staging area then
+we commited to our local repositorey of git using git commit - "msg" command
+then u wont see any U or A on project which is commited
+
+8. write command git status - by default it will be on master branch we have not selected branch at the time of commit
+
+9. Create a repositorey into your git using New button, once u create u will get once
+url, which is very imp
+
+10 Now we need to connect our local repositorey to remote repositorey one time
+for this use command git remote add origin https://github.com/Pinal0906/PWFramework.git
+this is the same url we got in step 9
+
+11. Now final step : push these files to remote repositorey
+so use command git push origin master
+once u push u will get authentication - provide authentication credentials using tokem or browser authentication
+
+**********************************************************************************
+---Now process of adding remote file created from github to local repositorey------------
+
+1. add file from your remote repo using Addfiles button inside your onr of the project
+goto your icon from corner > select repositories option > select you project > click on Add file
+once you fill evrything in ur file > click on Commit Changes button > add message and again click commit changes button
+
+2. Now type command in terminal git fetch origin master OR git pull origin master
+FETCH - comand will fetch only the new file added on project
+PULL - this command will pull eveything of this project
+
+3. Now if I modify any files then after modifiyng write a command
+git add file name
