@@ -59,3 +59,5 @@ Switching branchs
 git branch branchname //creates a new branch
 git checkout branch name // switch to branch
 git branch --show-current // to check current branch
+
+similarly like project we can push newly created branch to remote as well
