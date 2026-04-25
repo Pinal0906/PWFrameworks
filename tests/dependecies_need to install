@@ -1,0 +1,5 @@
+npm init playwright  
+npm install csv-parse
+npm install xlsx
+npm install -D allure-playwright
+npm install @faker-js/faker

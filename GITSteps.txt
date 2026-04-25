@@ -1,0 +1,11 @@
+1. download git and install
+2. then write command git init , you will gt status of all the files
+U - means untracked files, means they are ready to track or to staging
+3. then write git config --global user.name "pinal0906" - needs 1 time only
+4. then write git config --global user.email "pbpandya96@gmail.com" - needs 1 time only
+5. git add -a = all files will be added to global repositery
+- similarly we have other options to add
+   --if you want to add only single file then git add file name
+   --if files with only java extension then git add *.java
+   --if all file wit folder git add foldername
+   --if everything then git add .
