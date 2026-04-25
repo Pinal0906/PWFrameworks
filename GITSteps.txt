@@ -60,3 +60,12 @@ git checkout branch name // switch to branch
 git branch --show-current // to check current branch
 
 similarly like project we can push newly created branch to remote as well
+git add .
+git commit -m "message"
+git push branchname
+
+and then when you goto github then you will see button "Compare & pull request"
+click on it > click on Pull request button
+then click on "Merge Pull Request" button
+then code reviewer will review your command and do the change according to feedback
+then click on Confirm Merge button
