@@ -69,3 +69,8 @@ click on it > click on Pull request button
 then click on "Merge Pull Request" button
 then code reviewer will review your command and do the change according to feedback
 then click on Confirm Merge button
+
+
+----to generate and open allure report
+allure generate ./allure-results -o ./allure-report --clean
+allure open ./allure-report
