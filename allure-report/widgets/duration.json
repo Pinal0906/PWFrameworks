@@ -1,0 +1,1 @@
+[{"uid":"f87d4a8a929a03dd","name":"Account Registration","time":{"start":1777105514075,"stop":1777105522643,"duration":8568},"status":"passed","severity":"normal"},{"uid":"e47697e740c13017","name":"Login with valid credentials","time":{"start":1777122402883,"stop":1777122413169,"duration":10286},"status":"passed","severity":"normal"}]

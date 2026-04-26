@@ -53,4 +53,11 @@ export class LoginPage {
         await this.setPassword(password)
         await this.clickLogin()
     }
+
+    //get error message for login
+    async getloginErrorMessage(): Promise<string> {
+        const errorLocator = this.page.locator(".alert-danger")
+        const text = await errorLocator.textContent() ?? ""
+        return text.trim()
+    }
 }

@@ -108,4 +108,9 @@ export class MyAccountPage {
         const heading = await this.getMyAccountHeading()
         return heading.includes("My Account")
     }
+
+    //check if my account page exists
+    async isMyAccountPageExists(): Promise<boolean> {
+        return await this.myAccountHeading.isVisible()
+    }
 }
