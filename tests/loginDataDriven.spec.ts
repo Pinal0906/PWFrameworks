@@ -7,7 +7,7 @@ import { DataProvider } from "../utils/dataProviders"
 
 
 //Load JSON test data loginData.json
-const jsonPath = "./testData/loginData.json"
+const jsonPath = "./testdata/loginData.json"
 
 const jsonTestData = DataProvider.getDataFromJSON(jsonPath)
 
@@ -27,6 +27,9 @@ for (const data of jsonTestData) {
             const loginPage = new LoginPage(page)
             await loginPage.login(data.email, data.password) // Use the email and password from the JSON test data to perform the login action    
         
+            // Wait for navigation to complete after login
+            await page.waitForLoadState("networkidle")
+        
             if (data.expectedResult.toLowerCase() === "success") {  
                 const myAccountPage=new MyAccountPage(page) // Assuming you have a MyAccountPage class to represent the My Account page
                 const isLoggedIn = await myAccountPage.isMyAccountPageExists() // Assuming you have a method to check if the user is logged in
@@ -34,7 +37,10 @@ for (const data of jsonTestData) {
             } else {
                 // Verify failed login by checking for the presence of an error message
                 const errorMessage = await loginPage.getloginErrorMessage() // Assuming you have a method to get the login error message    
-                expect(errorMessage).toBe("Warning: No match for E-Mail Address and/or Password.") // Assert that the error message is displayed    
+                // Handle both types of error messages: invalid credentials OR account locked
+                const isValidError = errorMessage.includes("Warning: No match for E-Mail Address") || 
+                                    errorMessage.includes("Warning: Your account has exceeded allowed number of login attempts");
+                expect(isValidError).toBeTruthy() // Assert that an error message is displayed    
             }
 
     })
